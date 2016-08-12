@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="github,hexo," />
+  <meta name="keywords" content="Mac," />
 
 
 
@@ -43,7 +43,7 @@
   </script>
 
 
-  <title> 搭建 Hexo + Github 博客 // Jianghao Wang </title>
+  <title> Mac OS Software // Jianghao Wang </title>
 </head>
 
 <body>
@@ -139,7 +139,7 @@
           
           
             
-              搭建 Hexo + Github 博客
+              Mac OS Software
             
           
         </h1>
@@ -147,14 +147,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2015-05-14
+          Posted on 2016-08-12
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/technology/">technology</a>
+              <a href="/categories/Technology/">Technology</a>
 
               
               
@@ -167,8 +167,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/hexo-github/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/hexo-github/"></span>
+            <a href="/2016/macos/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/macos/"></span>
             </a>
           </span>
           
@@ -182,64 +182,47 @@
       
 
       
-        <p><img src="http://i.v2ex.co/5bb7J7NT.png" alt=""></p>
-<h2 id="引言">引言</h2><p>本工作的根本目的是在Github上搭建一个个人博客。其优点是免费，而且可以学习Git。因此本人从今天开始打算将博客平台转移到Github上来。</p>
-<p>Github上可以用来搭建博客的工具大概有三个：Hexo, Jekyll, octopress等。但是经过研究发现最好的方式还是采用<code>Github + Hexo</code>的方式，因此这里介绍的方法正是基于该方法。</p>
-<p>基于<code>Github + Hexo</code>的博客搭建方法网上有许多教程，可以参考中文的<a href="http://www.zhihu.com/question/20962496" target="_blank" rel="external">详细教程</a>。推荐一下两个网站上的详细教程：</p>
-<ol>
-<li><a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
-<li><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">Hexo主题博客</a></li>
-<li><a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="external">使用GitHub和Hexo搭建免费静态Blog</a></li>
-</ol>
+        <h1 id="Mac_OS_Software">Mac OS Software</h1><p>[TOC]</p>
 <a id="more"></a>
-<h2 id="博客的搭建">博客的搭建</h2><p>参考上述的内容1, 2, 3</p>
-<ol>
-<li>安装<a href="https://windows.github.com/" target="_blank" rel="external">Github for Windows</a></li>
-<li>安装<a href="http://nodejs.org/" target="_blank" rel="external">node</a>并设置环境变量：<code>;C:\Program Files\nodejs\node_modules\npm</code></li>
-<li><p>安装<code>Hexo</code>：配置好GitHub目录后，在Github目录下新建一个文件 hexo，双击桌面上的<code>Git Shell</code>，输入<code>npm</code>命令即可安装。更多的帮助文件可以参考：<a href="http://hexo.io/zh-cn/docs/" target="_blank" rel="external">http://hexo.io/zh-cn/docs/</a></p>
-<pre><code><span class="keyword">cd</span> hexo
-npm install -<span class="keyword">g</span> hexo-<span class="keyword">cli</span>
-npm install hexo --<span class="keyword">save</span>
-</code></pre></li>
-</ol>
-<ol>
-<li><strong>部署Hexo</strong>：在Git shell 中输入<code>hexo init</code></li>
-<li><p><strong>安装Hexo 插件</strong>：非必要步骤</p>
- <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-generator-<span class="keyword">index</span> <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-generator-archive <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-generator-category <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-generator-tag <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-<span class="keyword">server</span> <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-deployer-heroku <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-deployer-rsync <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-deployer-openshift <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-renderer-marked@<span class="number">0.2</span> <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-renderer-stylus@<span class="number">0.2</span> <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-generator-feed@<span class="number">1</span> <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-generator-sitemap@<span class="number">1</span> <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>测试本地效果</strong>：采用命令： <code>hexo d -g</code>，或<code>hexo generate</code>, <code>hexo server</code>，成功后可登录localhost:4000查看效果。 </p>
-</li>
-<li><strong>新建仓库</strong>。在<code>Github</code>上新建一个Github Pages，即建立一个仓库New Repository，命名为<code>jianghao.github.io</code>,注意这里必须命名为<code>io</code>，而不是<code>com</code>。因为Github Pages的Repository名字是特定的，比如我Github账号是jianghao，那么我Github Pages Repository名字就是jianghao.github.io。</li>
-<li>用Hexo<strong>克隆主题</strong>。首先克隆你想要的主题。一个完整的主题列表可见：<a href="https://github.com/hexojs/hexo/wiki/themes" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/themes</a> 。个人倾向的主题为：<ul>
-<li>英文主题：Codeland</li>
-<li>中文主题：Coney<br>具体的方法参考<a href="http://gengbiao.me/hexo/coney%E4%B8%BB%E9%A2%98%E4%BB%8B%E7%BB%8D/" target="_blank" rel="external">coney主题介绍</a></li>
+<h2 id="System_Management">System Management</h2><h3 id="iStatMenus">iStatMenus</h3><blockquote>
+<p><a href="http://www.pc6.com/mac/111587.html" target="_blank" rel="external">http://www.pc6.com/mac/111587.html</a></p>
+</blockquote>
+<h2 id="Efficient">Efficient</h2><ul>
+<li>EverNote</li>
 </ul>
-</li>
-<li>修改与调试<br>启动本地服务：<code>hexo serve</code><br>部署到Github前需要配置_config.yml文件</li>
-</ol>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">	<span class="attribute">type</span>: git</span><br><span class="line">	<span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:jianghao/jianghao.github.com.git</span><br><span class="line">	<span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
-<p>如果是为了项目制作网站，需要将branch设置为<code>gh-pages</code>，如果需要绑定域名，需要制作一个<code>cname</code>文件。因为每次deploy的时候hexo都会重新生成文件，所以直接加在github是不好使的，这个文件需要放在 <code>hexo folder/source</code>文件夹根目录下。</p>
-<p>执行完，开始部署，即先<code>hexo generate</code>，然后<code>hexo deploy</code>。也可以一部到位：<code>hexo d -g</code></p>
-<ol>
-<li>将独立域名与GitHub Pages的空间<strong>域名绑定</strong><ul>
-<li>Githubpage 设置：在Repository的根目录下面，新建一个名为CNAME的文本文件，里面写入你要绑定的域名，如<code>jianghao.wang</code>。</li>
-<li>DNS设置：注册DNSpod，添加域名，不是必要的步骤，但是据说可以提高解析效率。本人没有测试。</li>
-<li>在域名服务商，如<code>net.cn</code>中修改增加两条A记录，指向github pages 提供的 ip<ul>
-<li>192.30.252.153</li>
-<li>192.30.252.154</li>
-</ul>
+<h2 id="Terminal">Terminal</h2><h3 id="iTerm_2">iTerm 2</h3><p><a href="https://www.iterm2.com/" target="_blank" rel="external">https://www.iterm2.com/</a></p>
+<h3 id="Sublime_Text_3">Sublime Text 3</h3><p><a href="https://www.sublimetext.com/3" target="_blank" rel="external">https://www.sublimetext.com/3</a></p>
+<h3 id="brew">brew</h3><ul>
+<li>Install：<a href="http://brew.sh/" target="_blank" rel="external">http://brew.sh/</a></li>
+<li>Install software：<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew <span class="keyword">install</span> wget</span><br><span class="line">brew <span class="keyword">install</span> lftp</span><br><span class="line">brew <span class="keyword">install</span> gdal</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-</li>
-</ol>
-<h2 id="Hexo_设置">Hexo 设置</h2><p>主要参考：<a href="http://zipperary.com/2013/05/29/hexo-guide-3/" target="_blank" rel="external">hexo博客的配置、使用</a></p>
-<h3 id="设置_config-yml">设置_config.yml</h3><p>参考上述文章的内容。<a href="http://zipperary.com/2013/05/29/hexo-guide-3/" target="_blank" rel="external">hexo博客的配置、使用</a></p>
-<h3 id="设置主题配置文件">设置主题配置文件</h3><p>coney主题参考：<a href="http://gengbiao.me/hexo/coney%E4%B8%BB%E9%A2%98%E4%BB%8B%E7%BB%8D/" target="_blank" rel="external">coney主题介绍</a></p>
-<p>Next主题参考：<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next 主题</a><br>个人对该主题进行了一些修改，修改后的内容备份在Github 的Gist上：<a href="https://gist.github.com/Jianghao/9197abdb7482c6bf9df7" target="_blank" rel="external">https://gist.github.com/Jianghao/9197abdb7482c6bf9df7</a></p>
-<p>内容如下：</p>
-<script src="https://gist.github.com/Jianghao/9197abdb7482c6bf9df7.js"></script>
-
-
+<h2 id="R">R</h2><h3 id="R-GUI">R-GUI</h3><ul>
+<li>Download：<a href="https://mirrors.tuna.tsinghua.edu.cn/CRAN/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/CRAN/</a></li>
+</ul>
+<h3 id="RStudio">RStudio</h3><ul>
+<li>Download：<a href="https://www.rstudio.com/products/rstudio/download/" target="_blank" rel="external">https://www.rstudio.com/products/rstudio/download/</a></li>
+</ul>
+<h2 id="Tools">Tools</h2><ul>
+<li>FileZilla</li>
+<li>Sunrise</li>
+<li>Wunderlist</li>
+<li>Pocket</li>
+<li>Teamviewer</li>
+<li>Google Chrome</li>
+<li>EndNote X7</li>
+<li>马克飞象</li>
+<li>Skype</li>
+<li>Reeder</li>
+<li>WeChat</li>
+<li>QQ</li>
+<li>Thunder</li>
+<li>QGIS</li>
+<li>Office 2016</li>
+<li>The Unarchiver</li>
+<li>Lantern</li>
+<li>Skype</li>
+</ul>
 
       
     </div>
@@ -248,9 +231,7 @@ npm install hexo --<span class="keyword">save</span>
       
         <div class="post-tags">
           
-            <a href="/tags/github/"> #github </a>
-          
-            <a href="/tags/hexo/"> #hexo </a>
+            <a href="/tags/Mac/"> #Mac </a>
           
         </div>
       
@@ -259,13 +240,11 @@ npm install hexo --<span class="keyword">save</span>
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/dynamic-beijing/">动态的北京城</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/ghost-linode/">Install Ghost on Linode</a>
+              <a href="/2015/dynamic-beijing/">动态的北京城</a>
             
           </div>
         </div>
@@ -411,7 +390,7 @@ npm install hexo --<span class="keyword">save</span>
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客的搭建"><span class="nav-number">2.</span> <span class="nav-text">博客的搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo_设置"><span class="nav-number">3.</span> <span class="nav-text">Hexo 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置_config-yml"><span class="nav-number">3.1.</span> <span class="nav-text">设置_config.yml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置主题配置文件"><span class="nav-number">3.2.</span> <span class="nav-text">设置主题配置文件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac_OS_Software"><span class="nav-number">1.</span> <span class="nav-text">Mac OS Software</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#System_Management"><span class="nav-number">1.1.</span> <span class="nav-text">System Management</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iStatMenus"><span class="nav-number">1.1.1.</span> <span class="nav-text">iStatMenus</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Efficient"><span class="nav-number">1.2.</span> <span class="nav-text">Efficient</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminal"><span class="nav-number">1.3.</span> <span class="nav-text">Terminal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iTerm_2"><span class="nav-number">1.3.1.</span> <span class="nav-text">iTerm 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sublime_Text_3"><span class="nav-number">1.3.2.</span> <span class="nav-text">Sublime Text 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#brew"><span class="nav-number">1.3.3.</span> <span class="nav-text">brew</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R"><span class="nav-number">1.4.</span> <span class="nav-text">R</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#R-GUI"><span class="nav-number">1.4.1.</span> <span class="nav-text">R-GUI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RStudio"><span class="nav-number">1.4.2.</span> <span class="nav-text">RStudio</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tools"><span class="nav-number">1.5.</span> <span class="nav-text">Tools</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -1005,8 +984,8 @@ npm install hexo --<span class="keyword">save</span>
 
     <script type="text/javascript">
       var disqus_shortname = 'jianghaowang';
-      var disqus_identifier = '2015/hexo-github/';
-      var disqus_url = 'http://jianghao.wang/2015/hexo-github/';
+      var disqus_identifier = '2016/macos/';
+      var disqus_url = 'http://jianghao.wang/2016/macos/';
 
       (function(){
         var dsq = document.createElement('script');
