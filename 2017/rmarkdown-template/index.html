@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="Beijing,LBS,big data," />
+  <meta name="keywords" content="markdown," />
 
 
 
@@ -43,7 +43,7 @@
   </script>
 
 
-  <title> 动态的北京城 // Jianghao Wang </title>
+  <title> Templates for R Markdown // Jianghao Wang </title>
 </head>
 
 <body>
@@ -139,7 +139,7 @@
           
           
             
-              动态的北京城
+              Templates for R Markdown
             
           
         </h1>
@@ -147,14 +147,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2015-06-11
+          Posted on 2017-03-21
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; In
             
-              <a href="/categories/research/">research</a>
+              <a href="/categories/technology/">technology</a>
 
               
               
@@ -167,8 +167,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/dynamic-beijing/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/dynamic-beijing/"></span>
+            <a href="/2017/rmarkdown-template/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/rmarkdown-template/"></span>
             </a>
           </span>
           
@@ -182,28 +182,32 @@
       
 
       
-        <p><img src="http://i4.tietuku.com/af8ae9cc58fe4976.gif" alt=""></p>
-<h2 id="引言">引言</h2><p>利用移动互联时代的LBS定位数据，定量刻画城市活动动态变化.</p>
-<a id="more"></a>
-<h2 id="数据获取">数据获取</h2><p>数据来源于腾讯的LBS定位数据。</p>
-<p><a href="http://easygo.qq.com" target="_blank" rel="external"><strong>宜出行</strong></a></p>
-<p>产品说明：</p>
-<blockquote>
-<p>本产品主要帮助用户查询某地方的当前人流量情况及拥挤风险，供用户出行参考。信息源于“腾讯大数据”，并通过数学模型计算。使用本产品，需手机上报位置信息。<br>本产品提供的查询空间范围为用户选定地点100米*100米大小的附近区域（约相当于1.4个标准足球场），查询时间范围为当前及最近一周情况。</p>
-</blockquote>
-<h2 id="数据处理过程">数据处理过程</h2><ol>
-<li>采用互联网大规模爬虫技术获取数据；</li>
-<li>对数据进行清洗</li>
-<li>定位数据空间化，栅格化</li>
-<li>数据输出可视化</li>
-</ol>
-<h2 id="成果展示">成果展示</h2><p>北京六环内人类活动动态变化过程，以2015-06-12为例。</p>
-<h3 id="24_小时动态变化过程">24 小时动态变化过程</h3><p><img src="https://raw.githubusercontent.com/Jianghao/jianghao.github.io/master/attach/figs/2015-06-12-one%20page.jpg" alt=""></p>
-<h4 id="凌晨时刻_（00：00）">凌晨时刻 （00：00）</h4><p><img src="https://raw.githubusercontent.com/Jianghao/jianghao.github.io/master/attach/figs/Beijing2015-06-12_00.jpg" alt=""></p>
-<h4 id="早高峰时刻（08：00）">早高峰时刻（08：00）</h4><p><img src="https://raw.githubusercontent.com/Jianghao/jianghao.github.io/master/attach/figs/Beijing2015-06-12_08.jpg" alt=""></p>
-<h4 id="正午时刻（12：00）">正午时刻（12：00）</h4><p><img src="https://raw.githubusercontent.com/Jianghao/jianghao.github.io/master/attach/figs/Beijing%2015-06-12_12.jpg" alt=""></p>
-<h4 id="下午时刻_（16：00）">下午时刻 （16：00）</h4><p><img src="https://raw.githubusercontent.com/Jianghao/jianghao.github.io/master/attach/figs/Beijing2015-06-12_16.jpg" alt=""></p>
-<h4 id="晚上时刻（20：00）">晚上时刻（20：00）</h4><p><img src="https://raw.githubusercontent.com/Jianghao/jianghao.github.io/master/attach/figs/Beijing2015-06-12_20.jpg" alt=""></p>
+        <h2 id="R_Packages">R Packages</h2><ul>
+<li><p>R Markdown Custom Formats: <a href="https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/" target="_blank" rel="external">https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/</a></p>
+<ul>
+<li><code>tufte</code> — Documents in the style of Edward Tufte</li>
+<li><code>rticles</code> — Formats for creating LaTeX based journal articles</li>
+<li><code>rmdformats</code> — Formats for creating HTML documents</li>
+</ul>
+</li>
+<li><p><code>markdowntemplates</code>: A collection of alternate R markdown templates   <a href="https://github.com/hrbrmstr/markdowntemplates" target="_blank" rel="external">https://github.com/hrbrmstr/markdowntemplates</a></p>
+</li>
+<li><code>thesisdown</code>: An updated R Markdown thesis template using the bookdown package  <a href="https://github.com/ismayc/thesisdown" target="_blank" rel="external">https://github.com/ismayc/thesisdown</a></li>
+<li><code>prettydoc</code>: Creating Pretty HTML From R Markdown <a href="http://yixuan.cos.name/prettydoc/" target="_blank" rel="external">http://yixuan.cos.name/prettydoc/</a></li>
+<li><code>rmdTemplates</code> R package containing a collection of Rmarkdown templates    <a href="https://github.com/Pakillo/rmdTemplates" target="_blank" rel="external">https://github.com/Pakillo/rmdTemplates</a></li>
+<li><code>manuscriptPackage</code>  Template for writing manuscripts as an R package   <a href="https://github.com/jhollist/manuscriptPackage" target="_blank" rel="external">https://github.com/jhollist/manuscriptPackage</a></li>
+<li><code>template</code>  A template for my research projects, based on the R package structure   <a href="https://github.com/cboettig/template" target="_blank" rel="external">https://github.com/cboettig/template</a></li>
+<li><code>rmarkdown-website-template</code>: Template for creating your website with R markdown. <a href="https://github.com/privefl/rmarkdown-website-template" target="_blank" rel="external">https://github.com/privefl/rmarkdown-website-template</a></li>
+</ul>
+<h2 id="User_defined">User defined</h2><ul>
+<li>Simple template for scientific manuscripts in R markdown: <a href="http://www.petrkeil.com/?p=2401" target="_blank" rel="external">http://www.petrkeil.com/?p=2401</a></li>
+<li>An R Markdown Template for Academic Manuscripts: <a href="http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/" target="_blank" rel="external">http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/</a></li>
+<li><code>rmarkdown-article-template</code> A personal template for Rmarkdown   <a href="https://github.com/danilofreire/rmarkdown-article-template" target="_blank" rel="external">https://github.com/danilofreire/rmarkdown-article-template</a></li>
+<li>R Markdown template for CSUN Master Thesis: <a href="https://github.com/carlganz/CSUNtemplate" target="_blank" rel="external">https://github.com/carlganz/CSUNtemplate</a></li>
+<li><code>uiucthemes</code> : RMarkdown Templates for UIUC Theme-Oriented Documents (e.g. UIUC Beamer) <a href="https://github.com/coatless/uiucthemes" target="_blank" rel="external">https://github.com/coatless/uiucthemes</a></li>
+<li><code>ucbthesis</code>: Latex, Knitr, and RMarkdown templates for UC Berkeley’s graduate thesis.</li>
+</ul>
+<h2 id="Chinese">Chinese</h2><p>Template for creating Chinese beamer &amp; PDF on Windows: <a href="https://github.com/BruceZhaoR/Zh-beamer" target="_blank" rel="external">https://github.com/BruceZhaoR/Zh-beamer</a></p>
 
       
     </div>
@@ -212,11 +216,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Beijing/"> #Beijing </a>
-          
-            <a href="/tags/LBS/"> #LBS </a>
-          
-            <a href="/tags/big-data/"> #big data </a>
+            <a href="/tags/markdown/"> #markdown </a>
           
         </div>
       
@@ -225,13 +225,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/macos/">Mac OS Software</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/hexo-github/">搭建 Hexo + Github 博客</a>
+              <a href="/2016/gdal/">GDAL</a>
             
           </div>
         </div>
@@ -377,7 +375,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据获取"><span class="nav-number">2.</span> <span class="nav-text">数据获取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据处理过程"><span class="nav-number">3.</span> <span class="nav-text">数据处理过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#成果展示"><span class="nav-number">4.</span> <span class="nav-text">成果展示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#24_小时动态变化过程"><span class="nav-number">4.1.</span> <span class="nav-text">24 小时动态变化过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#凌晨时刻_（00：00）"><span class="nav-number">4.1.1.</span> <span class="nav-text">凌晨时刻 （00：00）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#早高峰时刻（08：00）"><span class="nav-number">4.1.2.</span> <span class="nav-text">早高峰时刻（08：00）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正午时刻（12：00）"><span class="nav-number">4.1.3.</span> <span class="nav-text">正午时刻（12：00）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下午时刻_（16：00）"><span class="nav-number">4.1.4.</span> <span class="nav-text">下午时刻 （16：00）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#晚上时刻（20：00）"><span class="nav-number">4.1.5.</span> <span class="nav-text">晚上时刻（20：00）</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#R_Packages"><span class="nav-number">1.</span> <span class="nav-text">R Packages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#User_defined"><span class="nav-number">2.</span> <span class="nav-text">User defined</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chinese"><span class="nav-number">3.</span> <span class="nav-text">Chinese</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -971,8 +969,8 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'jianghaowang';
-      var disqus_identifier = '2015/dynamic-beijing/';
-      var disqus_url = 'http://jianghao.wang/2015/dynamic-beijing/';
+      var disqus_identifier = '2017/rmarkdown-template/';
+      var disqus_url = 'http://jianghao.wang/2017/rmarkdown-template/';
 
       (function(){
         var dsq = document.createElement('script');
