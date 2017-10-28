@@ -5,6 +5,24 @@
     
     <url>
     
+      <loc>http://jianghao.wang/publication/2017-aaag/</loc>
+      <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/publication/2017-regionalstudies/</loc>
+      <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://jianghao.wang/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
@@ -68,26 +86,17 @@
     
     <url>
     
+      <loc>http://jianghao.wang/publication/2017-urbanstudies/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://jianghao.wang/post/</loc>
       <lastmod>2017-01-01T00:00:00+08:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://jianghao.wang/project/deep-learning/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://jianghao.wang/project/example-external-project/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -131,15 +140,6 @@
     
     <url>
     
-      <loc>http://jianghao.wang/publication/person-re-identification/</loc>
-      <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>http://jianghao.wang/post/migrate-from-jekyll/</loc>
       <lastmod>2014-03-10T00:00:00+08:00</lastmod>
     </url>
@@ -149,8 +149,8 @@
     
     <url>
     
-      <loc>http://jianghao.wang/publication/clothing-search-copy-2/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+      <loc>http://jianghao.wang/project/bus/</loc>
+      <lastmod>2013-11-22T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -158,36 +158,8 @@
     
     <url>
     
-      <loc>http://jianghao.wang/publication/clothing-search-copy-3/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://jianghao.wang/publication/clothing-search-copy/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://jianghao.wang/publication/clothing-search/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://jianghao.wang/publication_types/1/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
+      <loc>http://jianghao.wang/project/worldclim/</loc>
+      <lastmod>2013-11-20T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -196,7 +168,17 @@
     <url>
     
       <loc>http://jianghao.wang/publication_types/2/</loc>
-      <lastmod>2015-09-01T00:00:00+00:00</lastmod>
+      <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/tags/bigdata/</loc>
+      <lastmod>2013-11-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -214,18 +196,8 @@
     
     <url>
     
-      <loc>http://jianghao.wang/tags/deep-learning/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://jianghao.wang/tags/demo/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <loc>http://jianghao.wang/tags/gis/</loc>
+      <lastmod>2013-11-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -265,7 +237,7 @@
     <url>
     
       <loc>http://jianghao.wang/project/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2013-11-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -275,7 +247,17 @@
     <url>
     
       <loc>http://jianghao.wang/publication_types/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+      <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/tags/rs/</loc>
+      <lastmod>2013-11-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -286,6 +268,26 @@
     
       <loc>http://jianghao.wang/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/tags/urban/</loc>
+      <lastmod>2013-11-22T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/tags/visual/</loc>
+      <lastmod>2013-11-22T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
