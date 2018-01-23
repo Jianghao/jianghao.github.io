@@ -306,6 +306,7 @@
 <li><a href="#install-r-on-ubuntu-16-04">Install R on Ubuntu 16.04</a></li>
 <li><a href="#install-r-packages">install <code>R</code> packages</a></li>
 <li><a href="#update-packages">Update packages</a></li>
+<li><a href="#configure-r-with-chinese-env">Configure R with Chinese Env.</a></li>
 </ul></li>
 <li><a href="#use-rstudio-server">Use <code>RStudio Server</code></a>
 <ul>
@@ -430,6 +431,20 @@ for (i in 1:nrow(all.packages))
         install.packages(package.name)
     }
 }
+</code></pre>
+
+<h2 id="configure-r-with-chinese-env">Configure R with Chinese Env.</h2>
+
+<blockquote>
+<p>Ref: <a href="https://stackoverflow.com/questions/39304082/show-chinese-character-in-ggplot2" target="_blank">https://stackoverflow.com/questions/39304082/show-chinese-character-in-ggplot2</a>
+Ref: <a href="http://www.lypblog.com/index.php/archives/30/" target="_blank">http://www.lypblog.com/index.php/archives/30/</a></p>
+</blockquote>
+
+<pre><code>echo $LANG
+
+sudo apt-get update &amp;&amp; apt-get install language-pack-zh-hans
+sudo apt-get install fonts-wqy-zenhei
+sudo apt-get install fonts-arphic-bkai00mp fonts-arphic-bsmi00lp fonts-arphic-gbsn00lp fonts-arphic-gkai00mp fonts-arphic-ukai fonts-arphic-uming fonts-cns11643-kai fonts-cns11643-sung fonts-cwtex-fs fonts-cwtex-heib fonts-cwtex-kai fonts-cwtex-ming fonts-cwtex-yen
 </code></pre>
 
 <h1 id="use-rstudio-server">Use <code>RStudio Server</code></h1>
