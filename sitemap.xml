@@ -5,8 +5,98 @@
     
     <url>
     
+      <loc>http://jianghao.wang/project/sdgcn/</loc>
+      <lastmod>2018-07-10T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/publication/2018-jgr/</loc>
+      <lastmod>2018-06-25T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/publication/2018-rs-jin/</loc>
+      <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/publication/2018-tgrs/</loc>
+      <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/publication/2018-rs-jia/</loc>
+      <lastmod>2018-03-12T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/publication/2018-jag/</loc>
+      <lastmod>2018-02-16T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://jianghao.wang/post/2018-01-23-rstudio-server/</loc>
       <lastmod>2018-01-23T00:00:00+08:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/publication/2018-regionalstudies/</loc>
+      <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/publication/2018-jem/</loc>
+      <lastmod>2018-01-03T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/publication/2018-aaag/</loc>
+      <lastmod>2018-01-02T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/publication/2018-trpd/</loc>
+      <lastmod>2018-01-01T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -23,26 +113,17 @@
     
     <url>
     
-      <loc>http://jianghao.wang/publication/2018-trpd/</loc>
-      <lastmod>2017-11-28T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://jianghao.wang/publication/2018-jem/</loc>
-      <lastmod>2017-11-23T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>http://jianghao.wang/post/2017-11-07-install-packages-on-hpc/</loc>
       <lastmod>2017-11-07T00:00:00+08:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://jianghao.wang/talk/2017-nju/</loc>
+      <lastmod>2017-11-01T14:00:00+00:00</lastmod>
     </url>
     
   
@@ -61,24 +142,6 @@
     
       <loc>http://jianghao.wang/project/parcel/</loc>
       <lastmod>2017-10-20T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://jianghao.wang/publication/2017-aaag/</loc>
-      <lastmod>2017-08-28T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://jianghao.wang/publication/2017-regionalstudies/</loc>
-      <lastmod>2017-06-29T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -115,15 +178,6 @@
     
       <loc>http://jianghao.wang/talk/2017-dist/</loc>
       <lastmod>2017-05-26T10:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://jianghao.wang/talk/2017-nju/</loc>
-      <lastmod>2017-05-20T14:00:00+00:00</lastmod>
     </url>
     
   
@@ -836,7 +890,7 @@
     <url>
     
       <loc>http://jianghao.wang/publication_types/2/</loc>
-      <lastmod>2017-11-28T00:00:00+00:00</lastmod>
+      <lastmod>2018-06-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -856,7 +910,7 @@
     <url>
     
       <loc>http://jianghao.wang/tags/bigdata/</loc>
-      <lastmod>2017-10-20T00:00:00+00:00</lastmod>
+      <lastmod>2018-07-10T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -945,7 +999,7 @@
     <url>
     
       <loc>http://jianghao.wang/project/</loc>
-      <lastmod>2017-10-20T00:00:00+00:00</lastmod>
+      <lastmod>2018-07-10T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1015,7 +1069,7 @@
     <url>
     
       <loc>http://jianghao.wang/tags/urban/</loc>
-      <lastmod>2013-11-22T00:00:00+00:00</lastmod>
+      <lastmod>2018-07-10T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1025,7 +1079,7 @@
     <url>
     
       <loc>http://jianghao.wang/tags/visual/</loc>
-      <lastmod>2017-10-20T00:00:00+00:00</lastmod>
+      <lastmod>2018-07-10T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
