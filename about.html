@@ -10,44 +10,29 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap nav">
-    <a class="brand" href="index.html">
-      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <circle cx="16" cy="16" r="14" stroke="#12666A" stroke-width="1.6"/>
-        <ellipse cx="16" cy="16" rx="6.2" ry="14" stroke="#12666A" stroke-width="1.2"/>
-        <path d="M2 16h28M4.3 8.5h23.4M4.3 23.5h23.4" stroke="#12666A" stroke-width="1.2"/>
-        <circle cx="16" cy="16" r="2.4" fill="#C2673C"/>
-      </svg>
-      Jianghao Wang
-    </a>
+    <a class="brand" href="index.html">Jianghao Wang</a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" class="active">About</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="index.html#news">News</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
     </ul>
   </div>
 </header>
 
-<!-- about / bio -->
-<section class="hero graticule" style="border-bottom:1px solid var(--line)">
-  <div class="wrap" style="padding-block:clamp(2.5rem,6vw,4rem)">
-    <p class="eyebrow">About</p>
-    <h1 style="font-size:clamp(2rem,5vw,3.2rem);margin:.4rem 0 0">About me</h1>
-  </div>
-</section>
-
 <section class="section">
-  <div class="wrap" style="display:grid;grid-template-columns:1.6fr .9fr;gap:clamp(1.5rem,5vw,3.5rem);align-items:start">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
     <div class="prose">
+      <h1>About me</h1>
       <p><b>Jianghao Wang (王江浩)</b> is a Professor in the State Key Laboratory of Geographic
         Information Science and Technology (LREIS) at the Institute of Geographic Sciences and
         Natural Resources Research (IGSNRR), Chinese Academy of Sciences (CAS), where he serves as
@@ -57,8 +42,8 @@
       <p>His research develops <b>geospatial big data</b>, spatial statistics and AI to measure and
         understand <b>human behaviour</b> and to build <b>geographic intelligence</b> for pressing
         environmental and societal challenges. His work has appeared in <i>Nature Human Behaviour,
-        Nature Health, Nature Cities, Science Advances, Nature Communications</i> and <i>One Earth</i>,
-        and has been cited more than 5,000 times.</p>
+        Nature Health, Nature Cities, Science Advances, Nature Communications, One Earth</i> and
+        <i>PNAS</i>, and has been cited more than 5,000 times.</p>
 
       <h3>Research themes</h3>
 
@@ -75,63 +60,30 @@
         "intelligent geography" for prediction, mapping and decision support across climate, public
         health, wildfire risk and urban sustainability.</p>
 
-      <h3>Selected representative work</h3>
-      <ul>
-        <li>Air pollution lowers Chinese urbanites' expressed happiness on social media — <i>Nature Human Behaviour</i> (2019)</li>
-        <li>Global evidence of expressed sentiment alterations during the COVID-19 pandemic — <i>Nature Human Behaviour</i> (2022)</li>
-        <li>Global disparities in indoor wildfire-PM<sub>2.5</sub> exposure and mitigation costs — <i>Science Advances</i> (2025)</li>
-        <li>Unequal impacts of rising temperatures on global human sentiment — <i>One Earth</i> (2025)</li>
-        <li>Global health benefits and cost-effectiveness of indoor air purification — <i>Nature Health</i> (2026)</li>
-      </ul>
-      <p><a class="btn btn-ghost" href="publications.html">See all publications
+      <h3>Education &amp; appointments</h3>
+      <div class="dl-grid">
+        <div class="dl-block">
+          <h4>Education</h4>
+          <div class="dl-item"><b>PhD, GIScience</b><span>IGSNRR, CAS · 2014</span></div>
+          <div class="dl-item"><b>MSc, Cartography &amp; GIS</b><span>IGSNRR, CAS · 2010</span></div>
+          <div class="dl-item"><b>BSc, Geographic Information System</b><span>Hohai University · 2007</span></div>
+        </div>
+        <div class="dl-block">
+          <h4>Appointments</h4>
+          <div class="dl-item"><b>Professor &amp; Deputy Director</b><span>State Key Lab of GIS, IGSNRR · CAS</span></div>
+          <div class="dl-item"><b>Professor</b><span>University of CAS (UCAS)</span></div>
+          <div class="dl-item"><b>Visiting Scientist</b><span>MIT Sustainable Urbanization Lab</span></div>
+          <div class="dl-item"><b>Co-founder</b><span>Beijing City Lab (BCL)</span></div>
+        </div>
+      </div>
+
+      <p style="margin-top:2.4rem"><a class="link-arrow" href="publications.html">See all publications
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
     </div>
-
-    <aside>
-      <div class="theme" style="margin-bottom:1.2rem">
-        <h3 style="font-size:1.05rem">Education</h3>
-        <ul style="list-style:none;padding:0;margin:0;font-size:.95rem;color:var(--ink-soft)">
-          <li style="padding:.6rem 0;border-bottom:1px solid var(--line)"><b>PhD, GIScience</b><br><span class="muted">IGSNRR, CAS · 2014</span></li>
-          <li style="padding:.6rem 0;border-bottom:1px solid var(--line)"><b>MSc, Cartography &amp; GIS</b><br><span class="muted">IGSNRR, CAS · 2010</span></li>
-          <li style="padding:.6rem 0"><b>BSc, Geographic Information System</b><br><span class="muted">Hohai University · 2007</span></li>
-        </ul>
-      </div>
-      <div class="theme">
-        <h3 style="font-size:1.05rem">Appointments</h3>
-        <ul style="list-style:none;padding:0;margin:0;font-size:.95rem;color:var(--ink-soft)">
-          <li style="padding:.5rem 0;border-bottom:1px solid var(--line)">Professor &amp; Deputy Director<br><span class="muted">State Key Lab of GIS, IGSNRR&nbsp;·&nbsp;CAS</span></li>
-          <li style="padding:.5rem 0;border-bottom:1px solid var(--line)">Professor<br><span class="muted">University of CAS (UCAS)</span></li>
-          <li style="padding:.5rem 0;border-bottom:1px solid var(--line)">Visiting Scientist<br><span class="muted">MIT Sustainable Urbanization Lab</span></li>
-          <li style="padding:.5rem 0">Co-founder<br><span class="muted">Beijing City Lab (BCL)</span></li>
-        </ul>
-      </div>
-    </aside>
   </div>
 </section>
 
 <footer class="site-footer" id="contact">
-  <div class="wrap footer-grid">
-    <div>
-      <p class="footer-brand">Jianghao Wang · 王江浩</p>
-      <p style="color:#B7D0CF;margin:0;max-width:34ch">Professor of GIScience, Institute of Geographic
-        Sciences &amp; Natural Resources Research, Chinese Academy of Sciences.</p>
-    </div>
-    <div>
-      <h4>Navigate</h4>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="publications.html">Publications</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <ul class="footer-links">
-        <li><a href="mailto:wangjh@lreis.ac.cn">wangjh@lreis.ac.cn</a></li>
-        <li>11A Datun Rd., Chaoyang</li>
-        <li>Beijing 100101, China</li>
-      </ul>
-    </div>
-  </div>
   <div class="wrap footer-bottom">
     <span>© <span id="yr"></span> Jianghao Wang. All rights reserved.</span>
     <span>Built with static HTML · Hosted on GitHub Pages</span>

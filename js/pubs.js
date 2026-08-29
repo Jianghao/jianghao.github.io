@@ -1,7 +1,5 @@
-// Publication rendering shared by index.html (selected) and publications.html (full).
+// Publication rendering shared by index.html (selected TOC) and publications.html (full index).
 (function () {
-  var ME = /^j\w*\s+wang$|jianghao\s+wang|wang,?\s*j/i;
-
   function esc(s) { var d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
 
   function fmtAuthors(authors) {
@@ -18,26 +16,21 @@
     return null;
   }
 
-  function pubCard(p, opts) {
-    opts = opts || {};
-    var url = link(p);
-    var title = url
-      ? '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>'
-      : esc(p.title);
-    var venue = p.journal ? '<span class="badge badge-venue">' + esc(p.journal) + '</span>' : '';
-    var year = p.year ? '<span class="badge badge-year">' + esc(p.year) + '</span>' : '';
-    var role = (opts.role && p.role) ? '<span class="badge badge-role">' + esc(p.role) + '</span>' : '';
-    var blurb = (opts.blurb && p.blurb) ? '<p class="blurb">' + esc(p.blurb) + '</p>' : '';
-    var links = [];
-    if (url) links.push('<a href="' + esc(url) + '" target="_blank" rel="noopener">DOI ↗</a>');
-    var linksHtml = links.length ? '<div class="links">' + links.join('') + '</div>' : '';
-    return '<article class="pub' + (opts.compact ? ' pub-compact' : '') +
-      (opts.featured ? ' is-featured' : '') + '">' +
-      '<div class="venue-row">' + venue + year + role + '</div>' +
-      '<h3>' + title + '</h3>' +
-      '<p class="authors">' + fmtAuthors(p.authors) + '</p>' +
-      blurb + linksHtml + '</article>';
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function fmtDate(p) {
+    var d = p.date;
+    if (d && d.length === 10) {
+      var parts = d.split('-');
+      return parseInt(parts[2], 10) + ' ' + MONTHS[parseInt(parts[1], 10) - 1] + ' ' + parts[0];
+    }
+    if (d && d.length === 7) {
+      var mp = d.split('-');
+      return MONTHS[parseInt(mp[1], 10) - 1] + ' ' + mp[0];
+    }
+    return p.year || '';
   }
+
+  function sortKey(p) { return p.date || p.year || '0'; }
 
   function load() {
     // Data is loaded inline via data/publications.js (window.PUBLICATIONS) so the site
@@ -45,19 +38,56 @@
     return Promise.resolve(window.PUBLICATIONS || []);
   }
 
-  // ---- selected (home) ----
-  var selEl = document.getElementById('selectedPubs');
-  if (selEl) {
-    load().then(function (data) {
-      var sel = data.filter(function (p) { return p.selected; })
-        .sort(function (a, b) { return (a.featured_order || 0) - (b.featured_order || 0); });
-      selEl.innerHTML = sel.map(function (p) {
-        return pubCard(p, { blurb: true, featured: true, role: true });
-      }).join('');
-    }).catch(function () { selEl.innerHTML = '<p class="muted">Publications are loading — view the full list.</p>'; });
+  // ---- home: magazine table-of-contents row ----
+  function tocRow(p, i) {
+    var url = link(p);
+    var title = url
+      ? '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>'
+      : esc(p.title);
+    var venue = p.journal ? '<span class="venue">' + esc(p.journal) + '</span>' : '';
+    var year = p.year ? '<span>' + esc(p.year) + '</span>' : '';
+    var role = p.role ? '<span class="role">' + esc(p.role) + '</span>' : '';
+    var authors = fmtAuthors(p.authors);
+    return '<article class="toc-row">' +
+      '<span class="toc-num">' + String(i + 1).padStart(2, '0') + '</span>' +
+      '<div class="toc-thumb"><picture>' +
+        '<source srcset="img/' + esc(p.image) + '.webp" type="image/webp">' +
+        '<img src="img/' + esc(p.image) + '.png" alt="" loading="lazy" width="180" height="113">' +
+      '</picture></div>' +
+      '<div class="toc-body">' +
+        '<h3>' + title + '</h3>' +
+        (authors ? '<p class="authors">' + authors + '</p>' : '') +
+        '<div class="toc-meta">' + venue + year + role + '</div>' +
+      '</div></article>';
   }
 
-  // ---- full list (publications page) ----
+  var featEl = document.getElementById('featuredPubs');
+  if (featEl) {
+    load().then(function (data) {
+      var sel = data.filter(function (p) { return p.selected && p.image; })
+        .sort(function (a, b) { return (a.featured_order || 0) - (b.featured_order || 0); });
+      featEl.innerHTML = sel.map(tocRow).join('');
+    }).catch(function () { featEl.innerHTML = '<p class="muted">Publications are loading — view the full list.</p>'; });
+  }
+
+  // ---- full list: dense editorial index row ----
+  function idxRow(p) {
+    var url = link(p);
+    var title = url
+      ? '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>'
+      : esc(p.title);
+    var venue = p.journal ? '<span class="venue">' + esc(p.journal) + '</span>' : '';
+    var authors = fmtAuthors(p.authors);
+    return '<article class="idx-row">' +
+      '<div>' +
+        '<h3>' + title + '</h3>' +
+        (authors ? '<p class="authors">' + authors + '</p>' : '') +
+        (venue ? '<p class="idx-meta">' + venue + '</p>' : '') +
+      '</div>' +
+      '<span class="idx-year">' + esc(fmtDate(p)) + '</span>' +
+      '</article>';
+  }
+
   var fullEl = document.getElementById('fullPubs');
   if (fullEl) {
     var controls = document.getElementById('pubControls');
@@ -84,13 +114,13 @@
       items.forEach(function (p) {
         var y = p.year || 'Other';
         if (y !== curYear) { html += '<h2 class="year-head">' + esc(y) + '</h2>'; curYear = y; }
-        html += pubCard(p, { compact: true, featured: p.selected });
+        html += idxRow(p);
       });
       fullEl.innerHTML = html || '<p class="muted">No entries.</p>';
     }
 
     load().then(function (data) {
-      ALL = data.slice().sort(function (a, b) { return (b.year || '0').localeCompare(a.year || '0'); });
+      ALL = data.slice().sort(function (a, b) { return sortKey(b).localeCompare(sortKey(a)); });
       render();
       if (controls) {
         controls.addEventListener('click', function (e) {

@@ -17,7 +17,7 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,167 +25,139 @@
 <!-- ===== header ===== -->
 <header class="site-header">
   <div class="wrap nav">
-    <a class="brand" href="index.html">
-      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <circle cx="16" cy="16" r="14" stroke="#12666A" stroke-width="1.6"/>
-        <ellipse cx="16" cy="16" rx="6.2" ry="14" stroke="#12666A" stroke-width="1.2"/>
-        <path d="M2 16h28M4.3 8.5h23.4M4.3 23.5h23.4" stroke="#12666A" stroke-width="1.2"/>
-        <circle cx="16" cy="16" r="2.4" fill="#C2673C"/>
-      </svg>
-      Jianghao Wang
-    </a>
+    <a class="brand" href="index.html">Jianghao Wang</a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="index.html#news">News</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
     </ul>
   </div>
 </header>
 
-<!-- ===== hero ===== -->
-<section class="hero graticule">
-  <div class="wrap hero-grid">
-    <div class="hero-main">
-      <p class="hero-cn">王江浩</p>
-      <h1>Jianghao&nbsp;Wang</h1>
-      <p class="role">Professor of Geographic Information Science</p>
-      <p class="affil">
-        Institute of Geographic Sciences &amp; Natural Resources Research (IGSNRR), Chinese Academy of Sciences (CAS)<br>
-        Professor, University of Chinese Academy of Sciences (UCAS)<br>
-        Deputy Director, State Key Laboratory of Geographic Information Science and Technology (LREIS), CAS<br>
-        Research Scientist &amp; Visiting Scholar, MIT Sustainable Urbanization Lab
-      </p>
-      <p class="lede">I develop <b>geospatial big data</b> and AI methods to understand
-        <b>human behaviour</b> and build <b>geographic intelligence</b> for a sustainable planet —
-        from air pollution and wildfires to climate, health, and cities.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="about.html">Explore research
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a class="btn btn-ghost" href="publications.html">Publications</a>
+<!-- ===== hero / masthead ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="portrait-inset">
+      <img src="img/portrait.png" alt="Portrait of Jianghao Wang" width="230" height="230">
+      <p class="cn-cap">王江浩</p>
+      <p class="cap">Jianghao Wang, IGSNRR&nbsp;·&nbsp;CAS</p>
+    </div>
+    <h1 class="hero-name">Jianghao Wang</h1>
+    <p class="hero-role">Professor of Geographic Information Science</p>
+
+    <div class="hero-split">
+      <div class="hero-meta">
+        <p>Institute of Geographic Sciences &amp; Natural Resources Research (IGSNRR), Chinese Academy of Sciences (CAS)</p>
+        <p>Professor, University of Chinese Academy of Sciences (UCAS)</p>
+        <p>Deputy Director, State Key Laboratory of Geographic Information Science and Technology (LREIS), CAS</p>
+        <p>Research Scientist &amp; Visiting Scholar, MIT Sustainable Urbanization Lab</p>
       </div>
-      <div class="socials">
-        <a href="mailto:wangjh@lreis.ac.cn" aria-label="Email" title="Email">
-          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.7"/></svg></a>
-        <a href="https://scholar.google.com/citations?user=o1LllK0AAAAJ&hl=en" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 8l11 6 9-4.9V16h2V8L12 2zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.6z"/></svg></a>
-        <a href="https://orcid.org/0000-0001-5333-3827" aria-label="ORCID" title="ORCID" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM7.4 17.9H5.6V7.7h1.8v10.2zM6.5 6.4a1.1 1.1 0 110-2.2 1.1 1.1 0 010 2.2zm11.6 11.5h-3.9V7.7h3.7c3.6 0 5.1 2.6 5.1 5.1 0 2.8-2.1 5.1-4.9 5.1zm-.3-8.5h-1.8v6.9h1.7c2.4 0 3.4-1.6 3.4-3.4 0-2-1.2-3.5-3.3-3.5z"/></svg></a>
-        <a href="https://github.com/Jianghao" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
+      <div>
+        <p class="hero-lede">I develop <b>geospatial big data</b> and AI methods to understand
+          <b>human behaviour</b> and build <b>geographic intelligence</b> for a sustainable planet —
+          from air pollution and wildfires to climate, health, and cities.</p>
+        <div class="hero-cta">
+          <a class="link-arrow" href="about.html">Explore research
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="link-arrow" href="publications.html">Publications
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="socials">
+          <a href="mailto:wangjh@lreis.ac.cn" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.7"/></svg></a>
+          <a href="https://scholar.google.com/citations?user=o1LllK0AAAAJ&hl=en" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 8l11 6 9-4.9V16h2V8L12 2zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.6z"/></svg></a>
+          <a href="https://orcid.org/0000-0001-5333-3827" aria-label="ORCID" title="ORCID" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM7.4 17.9H5.6V7.7h1.8v10.2zM6.5 6.4a1.1 1.1 0 110-2.2 1.1 1.1 0 010 2.2zm11.6 11.5h-3.9V7.7h3.7c3.6 0 5.1 2.6 5.1 5.1 0 2.8-2.1 5.1-4.9 5.1zm-.3-8.5h-1.8v6.9h1.7c2.4 0 3.4-1.6 3.4-3.4 0-2-1.2-3.5-3.3-3.5z"/></svg></a>
+          <a href="https://github.com/Jianghao" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
+        </div>
       </div>
     </div>
-    <aside class="hero-aside">
-      <div class="portrait"><img src="img/portrait.png" alt="Portrait of Jianghao Wang" width="230" height="230"></div>
-    </aside>
   </div>
 </section>
 
-<!-- ===== research themes ===== -->
+<!-- ===== research themes (numbered) ===== -->
 <section class="section" id="research">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Research</p>
-      <h2>Turning spatial data into understanding of people &amp; planet</h2>
-      <p>My work sits at the intersection of geographic information science, computational
-         social science, and Earth &amp; environmental research.</p>
-    </div>
-    <div class="theme-grid">
-      <article class="theme">
-        <div class="theme-img"><picture><source srcset="img/theme-geodata.webp" type="image/webp"><img src="img/theme-geodata.png" alt="Illustration of layered geospatial map data" loading="lazy" width="960" height="544"></picture></div>
-        <div class="theme-body">
+    <p class="eyebrow">Research</p>
+    <h2 style="font-family:var(--font-display);font-weight:500;font-size:clamp(1.7rem,3.6vw,2.4rem);margin:0 0 .6rem">
+      Turning spatial data into understanding of people &amp; planet</h2>
+    <p class="muted" style="max-width:60ch;margin:0 0 1rem">My work sits at the intersection of geographic
+      information science, computational social science, and Earth &amp; environmental research.</p>
+
+    <div class="theme-row">
+      <span class="theme-num">01</span>
+      <div class="theme-content">
+        <picture><source srcset="img/theme-geodata.webp" type="image/webp"><img src="img/theme-geodata.png" alt="Illustration of layered geospatial map data" loading="lazy" width="960" height="544"></picture>
+        <div>
           <h3>Geospatial big data &amp; spatial statistics</h3>
           <p>Turning mobile-phone signalling, social-media, remote-sensing and human-mobility data into
              reliable, analysis-ready evidence — including principled methods for scaling and
              downscaling Earth-science and population data.</p>
         </div>
-      </article>
-      <article class="theme">
-        <div class="theme-img"><picture><source srcset="img/theme-behaviour.webp" type="image/webp"><img src="img/theme-behaviour.png" alt="Illustration of human mobility and sentiment networks across a landscape" loading="lazy" width="960" height="544"></picture></div>
-        <div class="theme-body">
+      </div>
+    </div>
+    <div class="theme-row">
+      <span class="theme-num">02</span>
+      <div class="theme-content">
+        <picture><source srcset="img/theme-behaviour.webp" type="image/webp"><img src="img/theme-behaviour.png" alt="Illustration of human mobility and sentiment networks across a landscape" loading="lazy" width="960" height="544"></picture>
+        <div>
           <h3>Human behaviour, environment &amp; health</h3>
           <p>Quantifying at global scale how the environment — air pollution, extreme heat, wildfire
              smoke, and even urban night light — shapes human sentiment, mobility, health and
              well-being, and revealing who bears the greatest burden.</p>
         </div>
-      </article>
-      <article class="theme">
-        <div class="theme-img"><picture><source srcset="img/theme-ai.webp" type="image/webp"><img src="img/theme-ai.png" alt="Illustration of an AI network over a globe with graticule" loading="lazy" width="960" height="544"></picture></div>
-        <div class="theme-body">
+      </div>
+    </div>
+    <div class="theme-row">
+      <span class="theme-num">03</span>
+      <div class="theme-content">
+        <picture><source srcset="img/theme-ai.webp" type="image/webp"><img src="img/theme-ai.png" alt="Illustration of an AI network over a globe with graticule" loading="lazy" width="960" height="544"></picture>
+        <div>
           <h3>Geographic intelligence &amp; AI</h3>
           <p>Deep learning, foundation models and “intelligent geography” for prediction, mapping and
              decision support across climate, public health, wildfire risk and urban sustainability.</p>
         </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== selected publications ===== -->
+<!-- ===== selected publications (magazine TOC) ===== -->
 <section class="section" id="selected" style="background:var(--paper-2);border-block:1px solid var(--line)">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Selected work</p>
-      <h2>Representative publications</h2>
-      <p>Ten representative papers — most as <span class="text-earth">first or corresponding author</span> —
-         in <span class="text-earth">Nature Human Behaviour, Nature Health, Nature Cities, Science Advances,
-         One Earth</span> and <span class="text-earth">Nature Communications</span>.
-         See the <a href="publications.html">full list of 100+ publications</a>.</p>
-    </div>
-    <div class="pub-list" id="selectedPubs"><!-- rendered by js/pubs.js --></div>
+    <p class="eyebrow">Selected work</p>
+    <h2 style="font-family:var(--font-display);font-weight:500;font-size:clamp(1.7rem,3.6vw,2.4rem);margin:0 0 .6rem">
+      Representative publications</h2>
+    <p class="muted" style="max-width:64ch;margin:0 0 1.6rem">Twelve representative papers — most as
+      <span class="text-earth">first or corresponding author</span> — in Nature Human Behaviour, Nature
+      Health, Nature Cities, Science Advances, One Earth, Nature Communications and PNAS. See the
+      <a href="publications.html">full list of 100+ publications</a>.</p>
+    <div class="toc" id="featuredPubs"><!-- rendered by js/pubs.js --></div>
   </div>
 </section>
 
 <!-- ===== news ===== -->
 <section class="section" id="news">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">News</p>
-      <h2>Recent updates</h2>
-    </div>
-    <div class="news" style="max-width:820px">
-      <div class="news-item"><time>2026</time><p>New paper in <b>Nature Health</b> quantifying the global health benefits and cost-effectiveness of indoor air purification.</p></div>
-      <div class="news-item"><time>2026</time><p>New paper in <b>Nature Cities</b> showing how wavelength-specific urban nighttime light modulates expressed sentiment across cities.</p></div>
-      <div class="news-item"><time>2025</time><p>Published in <b>Science Advances</b> on global disparities in indoor wildfire-PM<sub>2.5</sub> exposure and mitigation costs.</p></div>
-      <div class="news-item"><time>2025</time><p>New study in <b>One Earth</b> on the unequal impacts of rising temperatures on global human sentiment.</p></div>
-      <div class="news-item"><time>2025</time><p>Paper in <b>Nature Communications</b> projecting future heat-related mortality in Europe under compound day-night heatwaves.</p></div>
+    <p class="eyebrow">News</p>
+    <h2 style="font-family:var(--font-display);font-weight:500;font-size:clamp(1.5rem,3vw,2rem);margin:0 0 1.4rem">
+      Recent updates</h2>
+    <div class="news-list" style="max-width:760px">
+      <div class="news-row"><time datetime="2026-04-07">7 Apr 2026</time><p>New paper in <b>Nature Health</b> quantifying the global health benefits and cost-effectiveness of indoor air purification.</p></div>
+      <div class="news-row"><time datetime="2026-02-02">2 Feb 2026</time><p>New paper in <b>Nature Cities</b> showing how wavelength-specific urban nighttime light modulates expressed sentiment across cities.</p></div>
+      <div class="news-row"><time datetime="2025-10">Oct 2025</time><p>New study in <b>One Earth</b> on the unequal impacts of rising temperatures on global human sentiment.</p></div>
+      <div class="news-row"><time datetime="2025-08-11">11 Aug 2025</time><p>Paper in <b>Nature Communications</b> projecting future heat-related mortality in Europe under compound day-night heatwaves.</p></div>
+      <div class="news-row"><time datetime="2025-05-16">16 May 2025</time><p>Published in <b>Science Advances</b> on global disparities in indoor wildfire-PM<sub>2.5</sub> exposure and mitigation costs.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ===== contact ===== -->
 <footer class="site-footer" id="contact">
-  <div class="wrap footer-grid">
-    <div>
-      <p class="footer-brand">Jianghao Wang · 王江浩</p>
-      <p style="color:#B7D0CF;margin:0;max-width:34ch">Professor of GIScience, Institute of Geographic
-        Sciences &amp; Natural Resources Research, Chinese Academy of Sciences.</p>
-      <div class="footer-socials" style="margin-top:1.2rem">
-        <a href="mailto:wangjh@lreis.ac.cn" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.7"/></svg></a>
-        <a href="https://scholar.google.com/citations?user=o1LllK0AAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 8l11 6 9-4.9V16h2V8L12 2zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.6z"/></svg></a>
-        <a href="https://orcid.org/0000-0001-5333-3827" aria-label="ORCID" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM7.4 17.9H5.6V7.7h1.8v10.2zM6.5 6.4a1.1 1.1 0 110-2.2 1.1 1.1 0 010 2.2zm11.6 11.5h-3.9V7.7h3.7c3.6 0 5.1 2.6 5.1 5.1 0 2.8-2.1 5.1-4.9 5.1z"/></svg></a>
-        <a href="https://github.com/Jianghao" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
-      </div>
-    </div>
-    <div>
-      <h4>Navigate</h4>
-      <ul class="footer-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="index.html#news">News</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <ul class="footer-links">
-        <li><a href="mailto:wangjh@lreis.ac.cn">wangjh@lreis.ac.cn</a></li>
-        <li>11A Datun Rd., Chaoyang</li>
-        <li>Beijing 100101, China</li>
-      </ul>
-    </div>
-  </div>
   <div class="wrap footer-bottom">
     <span>© <span id="yr"></span> Jianghao Wang. All rights reserved.</span>
     <span>Built with static HTML · Hosted on GitHub Pages</span>
