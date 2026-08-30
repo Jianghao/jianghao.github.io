@@ -2443,5 +2443,326 @@
     "cites": 0,
     "selected": false,
     "date": "2026-07-30"
+  },
+  {
+    "title": "Fusion of pan-tropical biomass maps using weighted averaging and regional calibration data",
+    "year": "2014",
+    "type": "journal-article",
+    "journal": "International Journal of Applied Earth Observation and Geoinformation",
+    "doi": "10.1016/j.jag.2014.02.011",
+    "uri": null,
+    "authors": [
+      "Yong Ge",
+      "Valerio Avitabile",
+      "Gerard B.M. Heuvelink",
+      "Jianghao Wang",
+      "Martin Herold"
+    ],
+    "volume": "31",
+    "pages": "13-24",
+    "cites": 0
+  },
+  {
+    "title": "Spatial regression analysis on the variation of soil salinity in the Yellow River Delta",
+    "year": "2007",
+    "type": "conference-paper",
+    "journal": "SPIE Proceedings",
+    "doi": "10.1117/12.761911",
+    "uri": null,
+    "authors": [
+      "Hong Wang",
+      "Jianghao Wang",
+      "Gaohuan Liu"
+    ],
+    "volume": "6753",
+    "pages": "67531U",
+    "cites": 0
+  },
+  {
+    "title": "Big Models: From Beijing to the Whole China",
+    "year": "2015",
+    "type": "book-chapter",
+    "journal": "GeoJournal Library",
+    "doi": "10.1007/978-3-319-19342-7_13",
+    "uri": null,
+    "authors": [
+      "Ying Long",
+      "Zhenjiang Shen"
+    ],
+    "volume": null,
+    "pages": "255-272",
+    "cites": 0
+  },
+  {
+    "title": "Evaluating spatial statistical and machine learning models in urban dynamic population mapping",
+    "year": "2022",
+    "type": "journal-article",
+    "journal": "Transactions in Urban Data, Science, and Technology",
+    "doi": "10.1177/27541231221114169",
+    "uri": null,
+    "authors": [
+      "Zhifeng Cheng",
+      "Jianghao Wang",
+      "Kaixin Zhu",
+      "Yong Ge",
+      "Chenghu Zhou"
+    ],
+    "volume": "1",
+    "pages": "37-55",
+    "cites": 0
+  },
+  {
+    "title": "Regional Differences and Influential Factors of Open Public Space in Chinese Cities Based on Big Earth Data",
+    "year": "2020",
+    "type": "journal-article",
+    "journal": "Sustainability",
+    "doi": "10.3390/su12062514",
+    "uri": null,
+    "authors": [
+      "Penglong Wang",
+      "Yanyan Ma",
+      "Xueyan Zhao",
+      "Bao Wang",
+      "Jianghao Wang",
+      "Feng Gao"
+    ],
+    "volume": "12",
+    "pages": "2514",
+    "cites": 0
+  },
+  {
+    "title": "中国收缩城市及其研究框架",
+    "year": "2015",
+    "type": "journal-article",
+    "journal": "现代城市研究",
+    "authors": [
+      "龙瀛",
+      "吴康",
+      "王江浩"
+    ],
+    "volume": null,
+    "pages": "14-19",
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "基于改进场模型的城市影响范围动态演变——以中国中部地区为例",
+    "year": "2011",
+    "type": "journal-article",
+    "journal": "地理学报",
+    "authors": [
+      "王丽",
+      "邓羽",
+      "刘盛和",
+      "王江浩"
+    ],
+    "volume": "66",
+    "pages": "189-198",
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "大模型: 城市和区域研究的新范式",
+    "year": "2014",
+    "type": "journal-article",
+    "journal": "城市规划学刊",
+    "authors": [
+      "龙瀛",
+      "吴康",
+      "王江浩",
+      "刘行健"
+    ],
+    "volume": null,
+    "pages": "52-60",
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "大数据时代的精细化城市模拟: 方法, 数据和案例",
+    "year": "2014",
+    "type": "journal-article",
+    "journal": "人文地理",
+    "authors": [
+      "龙瀛",
+      "茅明睿",
+      "毛其智",
+      "沈振江",
+      "张永平"
+    ],
+    "volume": "29",
+    "pages": "7-13",
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "基于回归克里格的生态水文无线传感器网络布局优化",
+    "year": "2012",
+    "type": "journal-article",
+    "journal": "地球科学进展",
+    "authors": [
+      "葛咏",
+      "王江浩",
+      "王劲峰",
+      "晋锐",
+      "胡茂桂"
+    ],
+    "volume": "27",
+    "pages": "1006-1013",
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "全息地图建模与多重表达",
+    "year": "2018",
+    "type": "journal-article",
+    "journal": "测绘科学",
+    "authors": [
+      "齐清文",
+      "姜莉莉",
+      "张岸",
+      "余卓渊",
+      "王江浩"
+    ],
+    "volume": "43",
+    "pages": "7-14",
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "遥感影像几何校正的 GCP 残差模拟分析",
+    "year": "2011",
+    "type": "journal-article",
+    "journal": "遥感技术与应用",
+    "authors": [
+      "王江浩"
+    ],
+    "volume": "26",
+    "pages": "226-232",
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "典型区 \"美丽中国\" 全景评价指标体系构建思路",
+    "year": "2020",
+    "type": "journal-article",
+    "journal": "遥感技术与应用",
+    "authors": [
+      "马延吉",
+      "王宗明",
+      "王江浩",
+      "左小安",
+      "段洪涛",
+      "刘阁",
+      "任嘉敏"
+    ],
+    "volume": "35",
+    "pages": "287-294",
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "广义多维云模型及在空间聚类中的应用",
+    "year": "2009",
+    "type": "journal-article",
+    "journal": "地理学报",
+    "authors": [
+      "邓羽",
+      "刘盛和",
+      "张文婷",
+      "王丽",
+      "王江浩"
+    ],
+    "volume": "64",
+    "pages": "1439-1447",
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "The geography of city liveliness and land use configurations: Evidence from location-based big data in Beijing",
+    "year": "2016",
+    "type": "other",
+    "journal": "SERC Discussion Papers",
+    "authors": [
+      "C. Li",
+      "M. Wang",
+      "J. Wang",
+      "W. Wu"
+    ],
+    "volume": null,
+    "pages": null,
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "Exploring city social interaction ties in the big data era: Evidence based on location-based social media data from China",
+    "year": "2015",
+    "type": "conference-paper",
+    "journal": "ERSA Conference Papers",
+    "authors": [
+      "W. Wu",
+      "J. Wang"
+    ],
+    "volume": null,
+    "pages": null,
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "Urban vitality: The demand and supply of local consumption amenities",
+    "year": "2016",
+    "type": "journal-article",
+    "journal": "New Architecture",
+    "authors": [
+      "Y. Xu",
+      "S. Zheng",
+      "J. Wang"
+    ],
+    "volume": null,
+    "pages": "27-31",
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "Review of geostatistical-based downscaling",
+    "year": "2015",
+    "type": "journal-article",
+    "journal": "Remote Sensing Technology and Application",
+    "authors": [
+      "Y. Long",
+      "Y. Ge"
+    ],
+    "volume": "30",
+    "pages": "1-7",
+    "doi": null,
+    "uri": null,
+    "cites": 0
+  },
+  {
+    "title": "Spatial mapping of PM2.5 concentration in China with geographically weighted regression kriging model",
+    "year": "2018",
+    "type": "journal-article",
+    "journal": "Remote Sensing Technology and Application",
+    "authors": [
+      "Y. Shao",
+      "J. Wang",
+      "Y. Ge"
+    ],
+    "volume": "33",
+    "pages": "1103-1111",
+    "doi": null,
+    "uri": null,
+    "cites": 0
   }
 ]
