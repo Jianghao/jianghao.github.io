@@ -88,7 +88,8 @@
     "volume": "7",
     "pages": "100392",
     "cites": 2,
-    "date": "2026-02"
+    "date": "2026-02",
+    "image": "pub-aireview"
   },
   {
     "title": "Combined benefits of multi-hazard early warnings on human mobility resilience to tropical cyclones",
@@ -179,7 +180,8 @@
     "volume": "6",
     "pages": "100375",
     "cites": 8,
-    "date": "2025-12"
+    "date": "2025-12",
+    "image": "pub-intgeo"
   },
   {
     "title": "Future heat-related mortality in Europe driven by compound day-night heatwaves and demographic shifts",
@@ -222,7 +224,8 @@
     "volume": "4",
     "pages": "136-153",
     "cites": 0,
-    "date": "2025-06"
+    "date": "2025-06",
+    "image": "pub-greenspace"
   },
   {
     "title": "Global Disparities in Indoor Wildfire-PM2.5 Exposure and Mitigation Costs",
@@ -557,7 +560,8 @@
     "volume": "11",
     "pages": null,
     "cites": 10,
-    "date": "2024-04-27"
+    "date": "2024-04-27",
+    "image": "pub-mobility"
   },
   {
     "title": "Optimizing the detection of emerging infections using mobility-based spatial sampling",
@@ -608,7 +612,8 @@
     "volume": "51",
     "pages": null,
     "cites": 0,
-    "date": "2024-03-28"
+    "date": "2024-03-28",
+    "image": "pub-inversion"
   },
   {
     "title": "Rent-Seeking and the Spatial Allocation of Economic Activity: Evidence from China's Anti-Corruption Campaign",
@@ -677,7 +682,8 @@
     "volume": "113",
     "pages": "581-598",
     "cites": 16,
-    "date": "2023-03-16"
+    "date": "2023-03-16",
+    "image": "pub-georeview"
   },
   {
     "title": "Combined and delayed impacts of epidemics and extreme weather on urban mobility recovery",
@@ -946,7 +952,8 @@
     "volume": "17",
     "pages": "e0278322",
     "cites": 8,
-    "date": "2022-12-22"
+    "date": "2022-12-22",
+    "image": "pub-fear"
   },
   {
     "title": "Rising temperature threatens China’s cropland",
@@ -1056,7 +1063,8 @@
     "volume": null,
     "pages": null,
     "cites": 1,
-    "date": "2021-09-27"
+    "date": "2021-09-27",
+    "image": "pub-fear"
   },
   {
     "title": "Big Earth Data Supports Sustainable Cities and Communities: Progress and Challenges,地球大数据助力“可持续城市和社区”目标实现：进展与挑战",
@@ -1086,7 +1094,8 @@
     "volume": "21",
     "pages": null,
     "cites": 5,
-    "date": "2021-12"
+    "date": "2021-12",
+    "image": "pub-bmc-resumption"
   },
   {
     "title": "Exploring the Disproportion between Scientific Productivity and Knowledge Amount",
@@ -1133,7 +1142,8 @@
     "volume": "103",
     "pages": "102514",
     "cites": 111,
-    "date": "2021-12"
+    "date": "2021-12",
+    "image": "pub-rslanduse"
   },
   {
     "title": "A 43-Million-Person Investigation into Weather and Expressed Sentiment in a Changing Climate",
@@ -1221,7 +1231,8 @@
     "volume": null,
     "pages": null,
     "cites": 0,
-    "date": "2020-06-26"
+    "date": "2020-06-26",
+    "image": "pub-bmc-resumption"
   },
   {
     "title": "Estimating daily ground-level PM2.5 in China with random-forest-based spatiotemporal kriging",

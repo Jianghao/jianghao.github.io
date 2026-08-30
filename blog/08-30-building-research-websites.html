@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Building a research website that ages well — Jianghao Wang</title>
+<meta name="description" content="Why I rebuilt this site as a zero-build, hand-authored static site — and how the blog pipeline works.">
+<link rel="canonical" href="https://jianghao.wang/">
+<link rel="icon" href="../img/icon.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html">Jianghao Wang</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+    <ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../projects/index.html">Projects</a></li>
+      <li><a href="../blog/index.html" class="active">Blog</a></li>
+      <li><a href="../news.html">News</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="section" style="padding-bottom:0">
+  <div class="wrap" style="max-width:760px">
+    <p class="eyebrow">Blog · 30 Aug 2026</p>
+    <h1 class="post-title">Building a research website that ages well</h1>
+    <p class="post-title-zh">打造一个历久弥新的个人学术网站</p>
+    <p class="muted" style="margin-top:.4rem">Why I rebuilt this site as a zero-build, hand-authored static site — and how the blog pipeline works.
+      <br>为什么我选择用零构建的静态页面来重建个人网站，以及这套博客工作流是如何运转的。</p>
+  </div>
+</section>
+<section class="section" style="padding-top:1.5rem">
+  <div class="wrap" style="max-width:760px">
+    <div class="post-cover"><picture><source srcset="../img/theme-ai.webp" type="image/webp"><img src="../img/theme-ai.png" alt="" loading="lazy" width="960" height="544"></picture></div>
+    <article class="prose post-body"><p>This site runs on a deliberately simple stack: hand-written HTML, one stylesheet, and
+a small Python script that turns Markdown into pages. No framework, no build step, no
+JavaScript at runtime beyond a menu toggle.</p>
+<p>For an academic website, that trade is a good one. The site has to stay online for years
+with minimal maintenance, load fast for readers everywhere, and survive whatever happens
+to the underlying tools. Static HTML checks all three boxes.</p>
+<h2>How the blog works</h2>
+<p>Every post lives as a Markdown file in <code>content/blog/</code>, with a small frontmatter block
+for the title, date and summary:</p>
+<pre><code>---
+title: Building a research website that ages well
+date: 2026-08-30
+tags: web, science
+---
+</code></pre>
+<p>Running one command rebuilds the blog listing and each article page:</p>
+<pre><code class="language-bash">python build_content.py
+</code></pre>
+<p>The generated pages embed the same editorial layout as the rest of the site — serif
+display type, teal and terracotta accents, generous whitespace — so articles feel like
+part of the same publication rather than an afterthought.</p>
+<h2>Why bother</h2>
+<p>Academic work is full of fast-changing tooling, but a personal site is closer to a
+book than to an app. Books don't need to be recompiled every time the ecosystem moves;
+they need to keep being readable. A static site built on Markdown gets you the same
+kind of durability, plus the ability to write in plain text anywhere and keep every
+version in Git.</p>
+<p>The result is something I can maintain in an afternoon and that will still render
+correctly ten years from now.</p>
+</article>
+    <p class="muted" style="margin-top:3rem;font-size:.85rem"><a class="link-arrow" href="index.html">← Back to blog
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-bottom">
+    <span>© <span id="yr"></span> Jianghao Wang. All rights reserved.</span>
+    <span>Built with static HTML · Hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
