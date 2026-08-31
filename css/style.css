@@ -190,6 +190,7 @@ a:hover{color:var(--earth)}
 .news-toggle{color:var(--muted);font-size:.9rem;transition:transform .2s}
 .news-item[open] .news-toggle{transform:rotate(45deg)}
 .news-detail{display:grid;grid-template-columns:180px 1fr;gap:1.3rem;padding:0 0 1.5rem;color:var(--ink-soft)}
+.news-detail.single{grid-template-columns:1fr;gap:.4rem}
 .news-detail img{width:100%;height:auto;border:1px solid var(--line)}
 .news-detail p{margin:0 0 .7rem}
 .news-detail .paper-title{font-family:var(--font-display);font-weight:500;font-size:1.05rem;color:var(--ink);margin:0 0 .5rem}
