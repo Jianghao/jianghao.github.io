@@ -144,15 +144,20 @@ def page(title, desc, body, active, prev=""):
 """
 
 
-def cover_img(meta, base=".."):
-    """Optional cover image markup if meta['image'] set."""
+def cover_img(meta, base="..", wrap=None):
+    """Optional cover image markup if meta['image'] set. If `wrap` is a URL the
+    whole image becomes a link (with an ↗ affordance) to that external URL."""
     slug = meta.get("image")
     if not slug:
         return ""
-    return ('<div class="post-cover"><picture>'
-            f'<source srcset="{base}/img/{slug}.webp" type="image/webp">'
-            f'<img src="{base}/img/{slug}.png" alt="" loading="lazy" width="960" height="544">'
-            "</picture></div>")
+    inner = ('<div class="post-cover"><picture>'
+             f'<source srcset="{base}/img/{slug}.webp" type="image/webp">'
+             f'<img src="{base}/img/{slug}.png" alt="" loading="lazy" width="960" height="544">'
+             "</picture></div>")
+    if not wrap:
+        return inner
+    return (f'<a class="cover-link" href="{wrap}" target="_blank" rel="noopener">'
+            + inner + '<span class="cover-open" aria-hidden="true">' + EXT_SVG + '</span></a>')
 
 
 # ----------------------------------------------------------------------------
@@ -235,6 +240,14 @@ def build_blog():
 
 STATUS_LABEL = {"completed": "Completed", "ongoing": "Ongoing"}
 
+# small up-right-arrow icon reused for external-demo links (list cards + detail titles)
+EXT_SVG = ('<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">'
+           '<path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" '
+           'stroke-linecap="round" stroke-linejoin="round"/></svg>')
+BIG_SVG = ('<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">'
+           '<path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" '
+           'stroke-linecap="round" stroke-linejoin="round"/></svg>')
+
 
 def paper_cards(dois):
     """Render representative-publication cards (thumbnail + title link + journal/year)
@@ -296,10 +309,19 @@ def build_projects():
         html_body = md_to_html(body)
         title = meta.get("title", "Project")
         status = STATUS_LABEL.get(meta.get("status", ""), meta.get("status", ""))
+        link = meta.get("link")
+        if link:
+            link_esc = html_mod.escape(link)
+            title_html = (f'<a class="title-ext" href="{link_esc}" target="_blank" rel="noopener">'
+                          f'{html_mod.escape(title)} {BIG_SVG}</a>')
+            cover = cover_img(meta, wrap=link_esc)
+        else:
+            title_html = html_mod.escape(title)
+            cover = cover_img(meta)
         head = f"""<section class="section" style="padding-bottom:0">
   <div class="wrap" style="max-width:760px">
     <p class="eyebrow">Project · {html_mod.escape(meta.get('period') or meta.get('year') or '')}</p>
-    <h1 class="post-title">{html_mod.escape(title)}</h1>
+    <h1 class="post-title">{title_html}</h1>
     {('<p class="post-title-zh">' + html_mod.escape(meta['title_zh']) + '</p>') if meta.get('title_zh') else ''}
     <div class="project-meta">
       {f'<span class="toc-meta"><span class="venue">{status}</span><span>{html_mod.escape(meta.get("period",""))}</span></span>' if status else ''}
@@ -311,7 +333,7 @@ def build_projects():
 </section>
 <section class="section" style="padding-top:1.5rem">
   <div class="wrap" style="max-width:760px">
-    {cover_img(meta)}
+    {cover}
     <article class="prose post-body">{html_body}</article>
     {paper_cards(meta.get("papers"))}
     <p class="muted" style="margin-top:3rem;font-size:.85rem"><a class="link-arrow" href="index.html">← Back to projects
@@ -327,25 +349,40 @@ def build_projects():
         return bool(re.fullmatch(r"\d{4}", (meta.get("period", "") or "").strip()))
 
     def card_html(meta):
+        """One project card. When the project has an external `link`, the cover
+        and the title open that demo (new tab) and a 'Project details' link keeps
+        access to the detail page; otherwise the whole card links to the detail page."""
         status = STATUS_LABEL.get(meta.get("status", ""), meta.get("status", ""))
         year_badge = (f'<span class="project-year">{html_mod.escape(meta.get("year",""))}</span>'
                       if single_year(meta) else '')
-        return f"""<a class="project-card" href="{meta['slug']}.html">
-  {cover_img(meta)}
-  <div class="project-card-body">
-    <div class="project-card-top">
-      <h3>{html_mod.escape(meta.get('title',''))}</h3>
-      {year_badge}
-    </div>
-    {('<p class="post-title-zh" style="font-size:1rem;margin:0 0 .4rem">' + html_mod.escape(meta['title_zh']) + '</p>') if meta.get('title_zh') else ''}
-    <p class="authors">{html_mod.escape(meta.get('summary',''))}
-      {' · ' + html_mod.escape(meta['summary_zh']) if meta.get('summary_zh') else ''}</p>
-    <div class="toc-meta" style="margin-top:.5rem">
-      {f'<span class="venue">{status}</span>' if status else ''}
-      <span>{html_mod.escape(meta.get('period',''))}</span>
-    </div>
-  </div>
-</a>"""
+        title = html_mod.escape(meta.get('title', ''))
+        slug = meta['slug']
+        link = meta.get('link')
+        zh = ((f'<p class="post-title-zh" style="font-size:1rem;margin:0 0 .4rem">'
+               + html_mod.escape(meta['title_zh']) + '</p>') if meta.get('title_zh') else '')
+        summary = (f'<p class="authors">{html_mod.escape(meta.get("summary",""))}'
+                   + (f' · {html_mod.escape(meta["summary_zh"])}' if meta.get('summary_zh') else '')
+                   + '</p>')
+        meta_inner = ((f'<span class="venue">{status}</span>' if status else '')
+                      + f'<span>{html_mod.escape(meta.get("period",""))}</span>')
+
+        if not link:
+            return (f'<a class="project-card" href="{slug}.html">{cover_img(meta)}'
+                    f'<div class="project-card-body"><div class="project-card-top">'
+                    f'<h3>{title}</h3>{year_badge}</div>{zh}{summary}'
+                    f'<div class="toc-meta" style="margin-top:.5rem">{meta_inner}</div>'
+                    f'</div></a>')
+
+        link_esc = html_mod.escape(link)
+        cover = cover_img(meta, wrap=link_esc)
+        h3 = (f'<h3><a class="card-title-ext" href="{link_esc}" target="_blank" rel="noopener">'
+              f'{title} {EXT_SVG}</a></h3>')
+        details = f'<a class="card-details" href="{slug}.html">Project details {EXT_SVG}</a>'
+        return (f'<div class="project-card">{cover}'
+                f'<div class="project-card-body"><div class="project-card-top">{h3}{year_badge}</div>'
+                f'{zh}{summary}'
+                f'<div class="card-foot"><div class="toc-meta">{meta_inner}</div>{details}</div>'
+                f'</div></div>')
 
     CATEGORY_ORDER = ["Ongoing", "Research", "Review", "Vibe Coding"]
     CATEGORY_TAGLINE = {
