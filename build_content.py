@@ -349,40 +349,27 @@ def build_projects():
         return bool(re.fullmatch(r"\d{4}", (meta.get("period", "") or "").strip()))
 
     def card_html(meta):
-        """One project card. When the project has an external `link`, the cover
-        and the title open that demo (new tab) and a 'Project details' link keeps
-        access to the detail page; otherwise the whole card links to the detail page."""
+        """One project card on the index page. The whole card always links to the
+        project's detail page (external `link` is surfaced there, not on the grid)."""
         status = STATUS_LABEL.get(meta.get("status", ""), meta.get("status", ""))
         year_badge = (f'<span class="project-year">{html_mod.escape(meta.get("year",""))}</span>'
                       if single_year(meta) else '')
-        title = html_mod.escape(meta.get('title', ''))
-        slug = meta['slug']
-        link = meta.get('link')
-        zh = ((f'<p class="post-title-zh" style="font-size:1rem;margin:0 0 .4rem">'
-               + html_mod.escape(meta['title_zh']) + '</p>') if meta.get('title_zh') else '')
-        summary = (f'<p class="authors">{html_mod.escape(meta.get("summary",""))}'
-                   + (f' · {html_mod.escape(meta["summary_zh"])}' if meta.get('summary_zh') else '')
-                   + '</p>')
-        meta_inner = ((f'<span class="venue">{status}</span>' if status else '')
-                      + f'<span>{html_mod.escape(meta.get("period",""))}</span>')
-
-        if not link:
-            return (f'<a class="project-card" href="{slug}.html">{cover_img(meta)}'
-                    f'<div class="project-card-body"><div class="project-card-top">'
-                    f'<h3>{title}</h3>{year_badge}</div>{zh}{summary}'
-                    f'<div class="toc-meta" style="margin-top:.5rem">{meta_inner}</div>'
-                    f'</div></a>')
-
-        link_esc = html_mod.escape(link)
-        cover = cover_img(meta, wrap=link_esc)
-        h3 = (f'<h3><a class="card-title-ext" href="{link_esc}" target="_blank" rel="noopener">'
-              f'{title} {EXT_SVG}</a></h3>')
-        details = f'<a class="card-details" href="{slug}.html">Project details {EXT_SVG}</a>'
-        return (f'<div class="project-card">{cover}'
-                f'<div class="project-card-body"><div class="project-card-top">{h3}{year_badge}</div>'
-                f'{zh}{summary}'
-                f'<div class="card-foot"><div class="toc-meta">{meta_inner}</div>{details}</div>'
-                f'</div></div>')
+        return f"""<a class="project-card" href="{meta['slug']}.html">
+  {cover_img(meta)}
+  <div class="project-card-body">
+    <div class="project-card-top">
+      <h3>{html_mod.escape(meta.get('title',''))}</h3>
+      {year_badge}
+    </div>
+    {('<p class="post-title-zh" style="font-size:1rem;margin:0 0 .4rem">' + html_mod.escape(meta['title_zh']) + '</p>') if meta.get('title_zh') else ''}
+    <p class="authors">{html_mod.escape(meta.get('summary',''))}
+      {' · ' + html_mod.escape(meta['summary_zh']) if meta.get('summary_zh') else ''}</p>
+    <div class="toc-meta" style="margin-top:.5rem">
+      {f'<span class="venue">{status}</span>' if status else ''}
+      <span>{html_mod.escape(meta.get('period',''))}</span>
+    </div>
+  </div>
+</a>"""
 
     CATEGORY_ORDER = ["Ongoing", "Research", "Review", "Vibe Coding"]
     CATEGORY_TAGLINE = {
