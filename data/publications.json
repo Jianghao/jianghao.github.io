@@ -1,5 +1,58 @@
 [
   {
+    "title": "Global disparities and structural imbalances in AI integration for urban climate resilience research",
+    "year": "2026",
+    "type": "journal-article",
+    "journal": "npj Climate Action",
+    "doi": "10.1038/s44168-026-00431-w",
+    "uri": null,
+    "authors": [
+      "Mei Meng",
+      "Nicholas A. S. Hamm",
+      "Liang Emlyn Yang",
+      "Jianghao Wang",
+      "Faith K. S. Chan"
+    ],
+    "volume": null,
+    "pages": null,
+    "date": "2026-09-26"
+  },
+  {
+    "title": "Urban trees associated with a reduction in negative sentiment with stronger links during COVID-19",
+    "year": "2026",
+    "type": "journal-article",
+    "journal": "Nature Cities",
+    "doi": "10.1038/s44284-026-00519-8",
+    "uri": null,
+    "authors": [
+      "Jianhua Guo",
+      "Huadong Guo",
+      "Jianghao Wang",
+      "Danfeng Hong",
+      "Anna Kruspe",
+      "Xiao Xiang Zhu"
+    ],
+    "volume": null,
+    "pages": null,
+    "date": "2026-09-22"
+  },
+  {
+    "title": "Earth Foundation Models outperform traditional deep learning architectures for coastal ecosystem semantic segmentation and large-scale habitat mapping",
+    "year": "2026",
+    "type": "journal-article",
+    "journal": "Big Earth Data",
+    "doi": "10.1080/20964471.2026.2726004",
+    "uri": null,
+    "authors": [
+      "Daniel Jacome",
+      "Jianghao Wang",
+      "Yong Ge"
+    ],
+    "volume": null,
+    "pages": "1-28",
+    "date": "2026-09-11"
+  },
+  {
     "title": "Optimizing Fine-Tuning of Earth Foundation Models via Multidimensional Latin Hypercube Sampling for Small-Scale Burn Scar Identification",
     "year": "2026",
     "type": "journal-article",
