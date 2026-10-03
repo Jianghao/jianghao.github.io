@@ -11,7 +11,7 @@ summary_zh: 与 MIT 可持续城市化实验室、哈佛大学地理分析中心
 image: theme-behaviour
 link: https://www.globalsentiment.mit.edu/
 tags: sentiment, environment, climate, urban
-papers: 10.1038/s44284-026-00519-8, 10.1038/s41562-018-0521-2, 10.1038/s41562-022-01312-y, 10.1038/s44284-025-00384-x, 10.1016/j.oneear.2025.101422, 10.1016/j.oneear.2020.05.016
+papers: 10.1038/s41562-018-0521-2, 10.1038/s41562-022-01312-y, 10.1038/s44284-025-00384-x, 10.1016/j.oneear.2025.101422, 10.1016/j.oneear.2020.05.016, 10.1038/s44284-026-00519-8
 ---
 
 Global Sentiment is a research programme using social-media text at planetary scale

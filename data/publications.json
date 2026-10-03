@@ -15,7 +15,8 @@
     ],
     "volume": null,
     "pages": null,
-    "date": "2026-09-26"
+    "date": "2026-09-26",
+    "image": "pub-ai-climate-resilience"
   },
   {
     "title": "Urban trees associated with a reduction in negative sentiment with stronger links during COVID-19",
@@ -34,7 +35,8 @@
     ],
     "volume": null,
     "pages": null,
-    "date": "2026-09-22"
+    "date": "2026-09-22",
+    "image": "pub-urban-trees"
   },
   {
     "title": "Earth Foundation Models outperform traditional deep learning architectures for coastal ecosystem semantic segmentation and large-scale habitat mapping",
