@@ -5,6 +5,8 @@ year: 2026
 period: 2026
 category: Vibe Coding
 order: 4
+image: project-math-shortcuts
+link: https://jianghao.wang/math-shortcuts-explorer/
 summary: A Chinese-language maths learning site for grades 3–4, combining 20 illustrated Cornell-note lessons, worked examples and interactive review tests.
 summary_zh: 面向三至四年级的数学速算巧算学习网站，结合 20 课康奈尔图文笔记、分步例题与互动复习测验。
 github: https://github.com/Jianghao/math-shortcuts-explorer

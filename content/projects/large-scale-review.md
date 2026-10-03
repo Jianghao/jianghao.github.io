@@ -10,7 +10,7 @@ image: project-review
 category: Review
 order: 1
 tags: review, ai, bibliometrics, synthesis
-papers: 10.1016/j.geosus.2025.100392, 10.1016/j.geosus.2025.100375, 10.1080/24694452.2022.2130143, 10.1016/j.jag.2021.102514
+papers: 10.1038/s44168-026-00431-w, 10.1016/j.geosus.2025.100392, 10.1016/j.geosus.2025.100375, 10.1080/24694452.2022.2130143, 10.1016/j.jag.2021.102514
 ---
 
 Large-scale Review is a research direction on **AI-assisted knowledge synthesis**.

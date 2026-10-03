@@ -9,7 +9,7 @@ order: 2
 summary: A colourful, multi-page English word-learning academy built for a young learner — with browse, flashcard, quiz and spelling modes across themed journeys.
 summary_zh: 为小小学习者 Rainbow 打造的彩色多页面英语单词学习学院——支持浏览、闪卡、测验、拼写四种模式，覆盖多个主题旅程。
 image: project-wma
-link: http://jianghao.wang/word-magic-academy
+link: https://jianghao.wang/word-magic-academy/
 github: https://github.com/Jianghao/word-magic-academy
 tags: education, english, kids, web
 ---

@@ -11,7 +11,7 @@ summary_zh: 与 MIT 可持续城市化实验室、哈佛大学地理分析中心
 image: theme-behaviour
 link: https://www.globalsentiment.mit.edu/
 tags: sentiment, environment, climate, urban
-papers: 10.1038/s41562-018-0521-2, 10.1038/s41562-022-01312-y, 10.1038/s44284-025-00384-x, 10.1016/j.oneear.2025.101422, 10.1016/j.oneear.2020.05.016
+papers: 10.1038/s44284-026-00519-8, 10.1038/s41562-018-0521-2, 10.1038/s41562-022-01312-y, 10.1038/s44284-025-00384-x, 10.1016/j.oneear.2025.101422, 10.1016/j.oneear.2020.05.016
 ---
 
 Global Sentiment is a research programme using social-media text at planetary scale
@@ -29,7 +29,7 @@ Across studies we have shown that air pollution lowers expressed happiness, that
 daily weather moves sentiment for tens of millions of people, that rising
 temperatures degrade global sentiment unequally, that the pandemic altered how the
 world expressed emotion, and that even the wavelength of urban night-time light
-modulates how people feel. Five of the programme's landmark papers are listed below.
+modulates how people feel. The programme's representative papers are listed below.
 
 ## Collaboration
 

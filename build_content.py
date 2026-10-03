@@ -268,6 +268,12 @@ def paper_cards(dois):
         url = "https://doi.org/" + e["doi"]
         journal = html_mod.escape(e.get("journal", ""))
         year = html_mod.escape(e.get("year", ""))
+        authors = ", ".join(
+            f'<span class="me">{html_mod.escape(a)}</span>'
+            if re.search(r"jianghao\s+wang|^wang,?\s*jianghao", a, re.I)
+            else html_mod.escape(a)
+            for a in e.get("authors", [])
+        )
         img = e.get("image")
         if img:
             thumb = (f'<div class="toc-thumb"><picture>'
@@ -280,6 +286,7 @@ def paper_cards(dois):
             f'<article class="toc-row">'
             f'<span class="toc-num">{i:02d}</span>{thumb}'
             f'<div class="toc-body"><h3><a href="{url}" target="_blank" rel="noopener">{title}</a></h3>'
+            + (f'<p class="authors">{authors}</p>' if authors else '') +
             f'<div class="toc-meta"><span class="venue">{journal}</span><span>{year}</span></div>'
             f'</div></article>')
     if not rows:
@@ -325,7 +332,7 @@ def build_projects():
     {('<p class="post-title-zh">' + html_mod.escape(meta['title_zh']) + '</p>') if meta.get('title_zh') else ''}
     <div class="project-meta">
       {f'<span class="toc-meta"><span class="venue">{status}</span><span>{html_mod.escape(meta.get("period",""))}</span></span>' if status else ''}
-      {f'<a class="link-arrow" style="font-size:.9rem" href="{html_mod.escape(meta["link"])}" target="_blank" rel="noopener">Link ↗</a>' if meta.get("link") else ''}{f' <a class="link-arrow" style="font-size:.9rem" href="{html_mod.escape(meta["github"])}" target="_blank" rel="noopener">GitHub ↗</a>' if meta.get("github") else ''}
+      {f'<a class="link-arrow" style="font-size:.9rem" href="{html_mod.escape(meta["link"])}" target="_blank" rel="noopener">{"Visit website" if meta.get("github") else "Link"} ↗</a>' if meta.get("link") else ''}{f' <a class="link-arrow" style="font-size:.9rem" href="{html_mod.escape(meta["github"])}" target="_blank" rel="noopener">GitHub ↗</a>' if meta.get("github") else ''}
     </div>
     <p class="muted" style="margin-top:.4rem">{html_mod.escape(meta.get('summary',''))}
       {'<br>' + html_mod.escape(meta['summary_zh']) if meta.get('summary_zh') else ''}</p>
@@ -376,8 +383,12 @@ def build_projects():
             return card
         card = "\n".join(line.rstrip() for line in card.split("\n"))
         # Keep the detail-card link and repository link as siblings, never nested.
+        website_link = (f'<a class="link-arrow" href="{html_mod.escape(meta["link"])}" '
+                        f'target="_blank" rel="noopener" '
+                        f'aria-label="Visit {html_mod.escape(meta.get("title", "Project"))} website">'
+                        'Visit website ↗</a>' if meta.get("link") else '')
         return (f'<article class="project-card-with-links">{card}'
-                f'<div class="project-card-links"><a class="link-arrow" '
+                f'<div class="project-card-links">{website_link}<a class="link-arrow" '
                 f'href="{html_mod.escape(meta["github"])}" target="_blank" '
                 f'rel="noopener" aria-label="{html_mod.escape(meta.get("title", "Project"))} on GitHub">'
                 'GitHub ↗</a></div></article>')

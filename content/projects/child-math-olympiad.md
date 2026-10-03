@@ -5,6 +5,8 @@ year: 2026
 period: 2026
 category: Vibe Coding
 order: 3
+image: project-math-olympiad
+link: https://jianghao.wang/child-math-olympiad/
 summary: Interactive maths practice for primary-school children, with tiered hints, step-by-step solutions and locally saved progress — all usable offline.
 summary_zh: 面向小学生的互动奥数练习，提供分级提示、分步解法与本地进度保存，支持离线学习。
 github: https://github.com/Jianghao/child-math-olympiad
