@@ -232,6 +232,12 @@ a:hover{color:var(--earth)}
 .project-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:var(--teal-100);color:var(--ink)}
 .project-card .post-cover{margin:0;border:none;border-bottom:1px solid var(--line)}
 .project-card-body{padding:1rem 1.1rem 1.15rem}
+.project-card-with-links{display:flex;flex-direction:column;background:var(--surface);
+  border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.project-card-with-links .project-card{flex:1;border:none;border-radius:0;box-shadow:none}
+.project-card-with-links .project-card:hover{transform:none;box-shadow:none}
+.project-card-with-links:focus-within{outline:2px solid var(--focus);outline-offset:3px}
+.project-card-links{padding:.75rem 1.1rem;border-top:1px solid var(--line);font-size:.9rem}
 .project-card-top{display:flex;align-items:baseline;justify-content:space-between;gap:.8rem;margin-bottom:.3rem}
 .project-card-top h3{font-family:var(--font-display);font-weight:500;font-size:1.06rem;line-height:1.28;margin:0}
 .project-card:hover .project-card-top h3{color:var(--teal-700)}

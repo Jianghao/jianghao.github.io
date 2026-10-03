@@ -325,7 +325,7 @@ def build_projects():
     {('<p class="post-title-zh">' + html_mod.escape(meta['title_zh']) + '</p>') if meta.get('title_zh') else ''}
     <div class="project-meta">
       {f'<span class="toc-meta"><span class="venue">{status}</span><span>{html_mod.escape(meta.get("period",""))}</span></span>' if status else ''}
-      {f'<a class="link-arrow" style="font-size:.9rem" href="{html_mod.escape(meta["link"])}" target="_blank" rel="noopener">Link ↗</a>' if meta.get("link") else ''}
+      {f'<a class="link-arrow" style="font-size:.9rem" href="{html_mod.escape(meta["link"])}" target="_blank" rel="noopener">Link ↗</a>' if meta.get("link") else ''}{f' <a class="link-arrow" style="font-size:.9rem" href="{html_mod.escape(meta["github"])}" target="_blank" rel="noopener">GitHub ↗</a>' if meta.get("github") else ''}
     </div>
     <p class="muted" style="margin-top:.4rem">{html_mod.escape(meta.get('summary',''))}
       {'<br>' + html_mod.escape(meta['summary_zh']) if meta.get('summary_zh') else ''}</p>
@@ -341,7 +341,9 @@ def build_projects():
   </div>
 </section>"""
         open(os.path.join(out_dir, meta["slug"] + ".html"), "w", encoding="utf-8").write(
-            page(title, meta.get("summary", title), head, "Projects"))
+            page(title, meta.get("summary", title),
+                 "\n".join(line.rstrip() for line in head.split("\n")) if meta.get("github") else head,
+                 "Projects"))
 
     # ---- projects index (grouped by category) ----
     def single_year(meta):
@@ -354,7 +356,7 @@ def build_projects():
         status = STATUS_LABEL.get(meta.get("status", ""), meta.get("status", ""))
         year_badge = (f'<span class="project-year">{html_mod.escape(meta.get("year",""))}</span>'
                       if single_year(meta) else '')
-        return f"""<a class="project-card" href="{meta['slug']}.html">
+        card = f"""<a class="project-card" href="{meta['slug']}.html">
   {cover_img(meta)}
   <div class="project-card-body">
     <div class="project-card-top">
@@ -370,6 +372,15 @@ def build_projects():
     </div>
   </div>
 </a>"""
+        if not meta.get("github"):
+            return card
+        card = "\n".join(line.rstrip() for line in card.split("\n"))
+        # Keep the detail-card link and repository link as siblings, never nested.
+        return (f'<article class="project-card-with-links">{card}'
+                f'<div class="project-card-links"><a class="link-arrow" '
+                f'href="{html_mod.escape(meta["github"])}" target="_blank" '
+                f'rel="noopener" aria-label="{html_mod.escape(meta.get("title", "Project"))} on GitHub">'
+                'GitHub ↗</a></div></article>')
 
     CATEGORY_ORDER = ["Ongoing", "Research", "Review", "Vibe Coding"]
     CATEGORY_TAGLINE = {
